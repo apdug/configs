@@ -16,7 +16,7 @@ mkdir -p /webapps/clkec/production/socks
 cd /webapps/clkec/production
 
 if ! [ -d /webapps/clkec/production/project ]; then
-  git clone $REPO project
+  git clone $1 project
 fi
 cd project
 git pull
