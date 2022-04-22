@@ -28,4 +28,4 @@ if [ -e .python-version ]; then
     poetry config virtualenvs.in-project true --local
 fi
 poetry env use `cat .python-version`
-cd ~/production/project/ && ~/.poetry/bin/poetry run pip install --upgrade pip && ~/.poetry/bin/poetry install --no-dev
+cd ~/production/project/  && ~/.poetry/bin/poetry install --no-dev && ~/.poetry/bin/poetry run pip install --upgrade pip
