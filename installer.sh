@@ -8,3 +8,10 @@ ln -s /usr/lib/nginx/modules /etc/nginx/modules
 curl https://raw.githubusercontent.com/apdug/configs/main/nginx.conf -o /etc/nginx/nginx.conf
 service nginx restart
 touch /root/.nginxok
+
+
+# Actualizando metrics de DO
+wget https://repos.insights.digitalocean.com/install.sh
+chmod +x install.sh
+./install.sh
+
