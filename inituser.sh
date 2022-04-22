@@ -20,6 +20,7 @@ if ! [ -d /webapps/clkec/production/project ]; then
 fi
 cd project
 git pull
+git checkout clkec4_standardsync
 if [ -e .python-version ]; then
     pyenv install -s `cat .python-version`
     # poetry init -q
