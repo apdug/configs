@@ -15,6 +15,14 @@ wget https://repos.insights.digitalocean.com/install.sh
 chmod +x install.sh
 ./install.sh
 
+# bash
+wget https://raw.githubusercontent.com/apdug/configs/main/bashrc
+mv bashrc .bashrc
+exec $SHELL
+cp /root/.bashrc /webapps/clkec/
+chown clkec:webapps /webapps/clkec/.bashrc
+
+
 # Iniciando usuario
 groupadd --system webapps
 mkdir -p /webapps/
