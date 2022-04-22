@@ -26,6 +26,6 @@ if [ -e .python-version ]; then
     poetry env use `cat .python-version`
     poetry config virtualenvs.create true --local
     poetry config virtualenvs.in-project true --local
-    poetry install
 fi
-
+poetry run pip install --upgrade pip
+poetry install --no-dev
