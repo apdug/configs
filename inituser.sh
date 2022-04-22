@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ -f ~/.pyenv/bin/pyenv ]; then
+if ! [ -f ~/.pyenv/bin/pyenv ]; then
   curl https://pyenv.run | bash
 fi
 
-if [ -f ~/.pyenv/bin/pyenv ]; then
+if ! [ -f ~/.pyenv/bin/pyenv ]; then
   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 fi
 
