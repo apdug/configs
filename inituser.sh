@@ -14,9 +14,12 @@ mkdir -p /webapps/clkec/production
 mkdir -p /webapps/clkec/production/logs
 mkdir -p /webapps/clkec/production/socks
 cd /webapps/clkec/production
-git clone $REPO project
 
+if ! [ -d /webapps/clkec/production/project ]; then
+  git clone $REPO project
+fi
 cd project
+git pull
 if [ -e .python-version ]; then
     pyenv install -s `cat .python-version`
     # poetry init -q
