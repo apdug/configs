@@ -21,7 +21,7 @@ fi
 cd project
 git pull
 git checkout clkec4_standardsync
-if [ -e .python-version ]; then
+if [ -f .python-version ]; then
     pyenv install -s `cat .python-version`
     # poetry init -q
     poetry env use `cat .python-version`
