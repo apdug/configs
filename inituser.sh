@@ -1,3 +1,4 @@
+#!/bin/bash
 groupadd --system webapps
 mkdir -p /webapps/
 useradd --system --gid webapps --shell /bin/bash --home /webapps/clkec clkec
