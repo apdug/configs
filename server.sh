@@ -12,7 +12,7 @@ touch /root/.nginxok
 # bash
 wget https://raw.githubusercontent.com/apdug/configs/main/bashrc
 mv bashrc .bashrc
-exec $SHELL
+source ~/.bashrc
 cp /root/.bashrc /webapps/clkec/
 chown clkec:webapps /webapps/clkec/.bashrc
 
