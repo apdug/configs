@@ -7,8 +7,8 @@ fi
 if ! [ -f ~/.poetry/bin/poetry ]; then
   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 fi
-
-source ~/.bashrc
+cp ~/.bashrc ~/.profile
+source ~/.profile
 
 mkdir -p /webapps/clkec/production
 mkdir -p /webapps/clkec/production/logs
