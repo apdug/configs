@@ -9,12 +9,6 @@ curl https://raw.githubusercontent.com/apdug/configs/main/nginx.conf -o /etc/ngi
 service nginx restart
 touch /root/.nginxok
 
-
-# Actualizando metrics de DO
-wget https://repos.insights.digitalocean.com/install.sh
-chmod +x install.sh
-./install.sh
-
 # bash
 wget https://raw.githubusercontent.com/apdug/configs/main/bashrc
 mv bashrc .bashrc
@@ -41,3 +35,9 @@ chmod 700 /webapps/clkec/.ssh
 chmod 600 /webapps/clkec/.ssh/authorized_keys
 chown clkec /webapps/clkec/.ssh
 chown clkec /webapps/clkec/.ssh/authorized_keys
+
+
+# Actualizando metrics de DO
+wget https://repos.insights.digitalocean.com/install.sh
+chmod +x install.sh
+./install.sh
