@@ -9,13 +9,6 @@ curl https://raw.githubusercontent.com/apdug/configs/main/nginx.conf -o /etc/ngi
 service nginx restart
 touch /root/.nginxok
 
-# bash
-wget https://raw.githubusercontent.com/apdug/configs/main/bashrc
-mv bashrc .bashrc
-
-cp /root/.bashrc /webapps/clkec/
-chown clkec:webapps /webapps/clkec/.bashrc
-
 
 # Iniciando usuario
 groupadd --system webapps
@@ -35,6 +28,13 @@ chmod 700 /webapps/clkec/.ssh
 chmod 600 /webapps/clkec/.ssh/authorized_keys
 chown clkec /webapps/clkec/.ssh
 chown clkec /webapps/clkec/.ssh/authorized_keys
+
+
+# bash
+wget https://raw.githubusercontent.com/apdug/configs/main/bashrc
+mv bashrc .bashrc
+cp /root/.bashrc /webapps/clkec/
+chown clkec:webapps /webapps/clkec/.bashrc
 
 
 # Actualizando metrics de DO
