@@ -8,7 +8,7 @@ if ! [ -f ~/.poetry/bin/poetry ]; then
   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 fi
 cp ~/.bashrc ~/.profile
-source ~/.profile
+
 
 mkdir -p /webapps/clkec/production
 mkdir -p /webapps/clkec/production/logs
@@ -20,7 +20,11 @@ if ! [ -d /webapps/clkec/production/project ]; then
 fi
 cd project
 git pull
-git checkout clkec4_standardsync
+git checkout newpoetry
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+
 echo "START"
 if [ -f .python-version ]; then
     echo "INSTALL PYTHON VERSION"
