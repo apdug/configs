@@ -37,7 +37,4 @@ fi
 echo "END"
 poetry env use `cat .python-version`
 cd ~/production/project/  && ~/.poetry/bin/poetry install --no-dev && ~/.poetry/bin/poetry run pip install --upgrade pip
-cd ~/production/project
-cd ~/production/project/ && cp clkec/tpl_local_settings.py clkec/local_settings.py
-source .venv/bin/activate
-./manage.py collectstatic --noinput
+
