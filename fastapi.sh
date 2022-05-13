@@ -7,7 +7,7 @@ SOCKFILE=/webapps/clkec/production/socks/gunicorn.sock
 USER=clkec
 GROUP=webapps
 NUM_WORKERS=1
-DJANGO_SETTINGS_MODULE=clkec.settings
+DJANGO_SETTINGS_MODULE=PROJECTNAME.settings
 ACCESS_LOGFILE=/webapps/clkec/production/logs/fastapi_access.log
 ERROR_LOGFILE=/webapps/clkec/production/logs/fastapi_error.log
 LOGFILE=/webapps/clkec/production/logs/fastapi.log
@@ -21,7 +21,7 @@ export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$VENVDIR:$DJANGODIR:$PYTHONPATH
 
 
-exec uvicorn clkec.asgi:app --workers 3 --host 127.0.0.1 --port 8002
+exec uvicorn PROJECTNAME.asgi:app --workers 3 --host 127.0.0.1 --port 8002
 
 # Start your Django Unicorn
 # Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
